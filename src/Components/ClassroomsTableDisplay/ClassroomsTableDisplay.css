@@ -1,0 +1,14 @@
+Table {
+  width: 100%;
+  height: 100vw;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+td {
+  flex: 1
+}
+
+tr {
+  display: flex;
+}

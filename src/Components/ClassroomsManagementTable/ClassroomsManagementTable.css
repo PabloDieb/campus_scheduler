@@ -1,0 +1,20 @@
+#containerClassroomsTableManagement{
+  margin-top: 10%;
+  height: 60%;
+}
+
+Row {
+  width: 100%;
+}
+
+ul{ 
+  display: flex;
+}
+ul > li{
+  background-color: red;
+  flex: 1;
+}
+#tableX{
+  height: auto;
+  border-radius: 50%;
+}

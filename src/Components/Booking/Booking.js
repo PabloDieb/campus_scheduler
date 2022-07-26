@@ -2,7 +2,7 @@ import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import { useState, useContext } from "react";
 import GlobalState from '../../GlobalState';
 
-export default function Location(props) {
+export default function Booking(props) {
     const [state, setState] = useContext(GlobalState);
     const [show, setShow] = useState(false);
     const [values, setValues] = useState({});

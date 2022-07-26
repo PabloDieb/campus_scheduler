@@ -7,6 +7,11 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Header() {
   const nav = useNavigate();
+
+  const logOut = () => {
+    logout(); 
+    nav("/");
+  }
   return(
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
         <Container>
@@ -26,7 +31,7 @@ export default function Header() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link onClick={() => {logout(); nav("/") }}>Sair</Nav.Link>
+            <Nav.Link onClick={() => logOut()}>Sair</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         </Container>

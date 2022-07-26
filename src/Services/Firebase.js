@@ -77,9 +77,10 @@ const sendPasswordReset = async (email) => {
     alert(err.message);
   }
 };
-const logout = () => {
+
+const logout = async () => {
   console.log("Deslogando");
-  signOut(auth);
+  await signOut(auth);
 };
 
 export {

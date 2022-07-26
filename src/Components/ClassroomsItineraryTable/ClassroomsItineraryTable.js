@@ -1,7 +1,6 @@
 import { Table } from 'react-bootstrap';
 import { useState, useEffect, useContext } from "react";
 import { db, collection, getDocs } from "../../Services/Firebase";
-import Location from '../Location/Location';
 import GlobalState from '../../GlobalState';
 
 export default function ClassroomsItineraryTable() {
@@ -9,9 +8,9 @@ export default function ClassroomsItineraryTable() {
   const [locations, setLocations] = useState([]);
 
   useEffect(() => {
-    fetchLocations();//Adicionar data como param e classroomID
-    console.log("stateLocations", state)
-    setState(state => ({...state, locations: locations}))
+    // fetchLocations();//Adicionar data como param e classroomID
+    // console.log("stateLocations", state)
+    // setState(state => ({...state, locations: locations}))
     
   }, []);
   
@@ -39,13 +38,13 @@ export default function ClassroomsItineraryTable() {
         {
           locations && locations.map( location => {
             return (
-              <tr>
+              <tr key={location.id}>
                 <td>{location.name}</td>
                 <td>{location.abMorning !== "" ? location.abMorning : "-"}</td>
                 <td>{location.cdMorning !== "" ? location.cdMorning : "-"}</td>
                 <td>{location.abAfternoon}</td>
                 <td>{location.cdAfternoon}</td>
-                <td><Location classroomInfo={state.classrooms.filter(classroom => classroom.id === location.classroomId)}></Location></td>
+                {/* <td><Booking classroomInfo={state.classrooms.filter(classroom => classroom.id === location.classroomId)}></Location></td> */}
               </tr>
           )})
         }
